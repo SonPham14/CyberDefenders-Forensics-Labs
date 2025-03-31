@@ -147,7 +147,9 @@ Attacker create a reverse shell to gain further access from compromised web serv
 
 - [1] SQL Injection: https://portswigger.net/web-security/sql-injection
 - [2] Tshark: https://www.wireshark.org/docs/man-pages/tshark.html
-- [3] Full code:
+- [3] Gobuster: https://github.com/OJ/gobuster
+- [4] sqlmap: https://sqlmap.org/
+- [5] Full code:
 ```
 import subprocess
 
