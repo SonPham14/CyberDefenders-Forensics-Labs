@@ -6,14 +6,15 @@ A high-profile corporation that manages critical data and services across divers
 - Wireshark
 - Tshark
 - NetworkMiner
-- CyberChef
+- [CyberChef](https://gchq.github.io/CyberChef)
 
 
 ## Question
 
 First, we should know how many endpoints were conversation. There are 2 endpoints, `87.96.21.81` and `87.96.21.84`, were conversation. Anothers are gateway and broadcast IP.
 
-![{04CC375E-7949-488F-A582-32553D7D689A}](https://github.com/user-attachments/assets/c58bbdcb-3e16-445c-8b23-125b018793cb)
+<img src=https://github.com/user-attachments/assets/c58bbdcb-3e16-445c-8b23-125b018793cb width=100%>
+<p></p>
 
 Q1. Knowing the source IP of the attack allows security teams to respond to potential threats quickly. Can you identify the source IP responsible for potential port scanning activity?
 
