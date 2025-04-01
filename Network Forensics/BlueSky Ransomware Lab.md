@@ -1,6 +1,7 @@
 ## Scenario
-
+<p>
 A high-profile corporation that manages critical data and services across diverse industries has reported a significant security incident. Recently, their network has been impacted by a suspected ransomware attack. Key files have been encrypted, causing disruptions and raising concerns about potential data compromise. Early signs point to the involvement of a sophisticated threat actor. Your task is to analyze the evidence provided to uncover the attacker’s methods, assess the extent of the breach, and aid in containing the threat to restore the network’s integrity.
+</p>
 
 ## Tools used
 - Wireshark
@@ -58,11 +59,19 @@ Attacker enabled xp_cmdshell in Microsoft SQL Server, allowing them to execute s
 
 ![{D81E3F30-B8A5-45B3-A306-FA1C831C0BD9}](https://github.com/user-attachments/assets/acc0aebb-bc6a-49b4-aeb2-eef49fcbf0bf)
 
-
 **Answer: xp_cmdshell**
 
 ### Q5. Process injection is often used by attackers to escalate privileges within a system. What process did the attacker inject the C2 into to gain administrative privileges?
 
+After changing the setting in Q4 and re-logging in, the attacker run a script to append a malicious string in `%TEMP%\SBjzH.b64`.
+
+![{F8499A9F-E0F6-4317-83E1-E512C97F6720}](https://github.com/user-attachments/assets/9ee634bb-e9fd-45bb-9739-51cab6042d02)
+
+That is an executable file (exe) with signature is MZ at header.
+
+![image](https://github.com/user-attachments/assets/0a4e3b50-a061-48c4-8992-32c66fd5da90)
+
+But there are so many malicious SQL queries like this, so we will extract and merge together by following the python code at References.
 
 
 
@@ -120,3 +129,4 @@ Attacker enabled xp_cmdshell in Microsoft SQL Server, allowing them to execute s
 
 ## References
 - [1] xp_cmdshell: https://learn.microsoft.com/vi-vn/sql/database-engine/configure-windows/xp-cmdshell-server-configuration-option?view=sql-server-2017
+- [2] File Signature: 
