@@ -5,7 +5,7 @@ The SOC team has detected suspicious activity in the network traffic, revealing 
 ## Tools used:
 - [Wireshark](https://www.wireshark.org/download.html)
 - [NetworkMiner](https://www.netresec.com/?page=NetworkMiner)
-
+- [CyberChef](https://gchq.github.io/CyberChef)
 ## Questions
 
 ### Q1. Which IP address was used by the attacker during the initial access?
