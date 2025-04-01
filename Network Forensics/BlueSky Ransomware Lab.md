@@ -71,7 +71,7 @@ That is an executable file (exe) with signature is MZ at header.
 
 ![image](https://github.com/user-attachments/assets/0a4e3b50-a061-48c4-8992-32c66fd5da90)
 
-But there are so many malicious SQL queries like this, so we will extract and merge together by following the python code at References.
+But there are so many malicious SQL queries like this, so we will extract to understand clearly.
 
 
 
