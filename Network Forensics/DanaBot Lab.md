@@ -6,6 +6,14 @@ The SOC team has detected suspicious activity in the network traffic, revealing 
 - [Wireshark](https://www.wireshark.org/download.html)
 - [NetworkMiner](https://www.netresec.com/?page=NetworkMiner)
 - [CyberChef](https://gchq.github.io/CyberChef)
+
+## MITRE ATT&CK and D3FEND
+
+- MITRE ATT&CK:
+
+- MITRE D3FEND: 
+
+
 ## Questions
 
 ### Q1. Which IP address was used by the attacker during the initial access?
