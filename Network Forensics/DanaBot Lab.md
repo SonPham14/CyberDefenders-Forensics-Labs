@@ -9,10 +9,14 @@ The SOC team has detected suspicious activity in the network traffic, revealing 
 
 ## MITRE ATT&CK and D3FEND
 
-- MITRE ATT&CK:
+### MITRE ATT&CK:
 
-- MITRE D3FEND: 
 
+
+
+### MITRE D3FEND: 
+
+Updating...
 
 ## Questions
 
@@ -97,7 +101,10 @@ Check VirusTotal
 
 ### Q6. What is the MD5 hash of the second malicious file?
 
+AnyRun: https://app.any.run/tasks/9c91e420-2515-437e-a60b-ea0aff0050dc
+
 **Answer: e758e07113016aca55d9eda2b0ffeebe**
+
 
 ## References
 - [1] File Signature: https://www.garykessler.net/library/file_sigs.html
