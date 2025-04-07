@@ -11,31 +11,40 @@ As the lead analyst in this case, you are required to analyze the network traffi
 - [NetworkMiner](https://www.netresec.com/?page=NetworkMiner)
 - [CyberChef](https://gchq.github.io/CyberChef)
 
-## MITRE ATT&CK and MITRE DEF3ND
+## MITRE ATT&CK and MITRE D3FEND
 
 ### MITRE ATT&CK
 
-- Tactic: Reconnaissance [`TA0043`](https://attack.mitre.org/techniques/T1595/)
-  + Technique: Active Scanning: Wordlist Scanning [`T1595.003`](https://attack.mitre.org/techniques/T1595/003/)
+- Tactic: `Reconnaissance` [`TA0043`](https://attack.mitre.org/techniques/T1595/)
+  + Technique: `Active Scanning: Wordlist Scanning` [`T1595.003`](https://attack.mitre.org/techniques/T1595/003/)
 
     Attacker use web content discovery tools to enumerate a website’s pages and directories.
 
-- Tactic: Initial Access [`TA0001`](https://attack.mitre.org/tactics/TA0001/)
-  + Technique: Exploit Public-Facing Application [`T1190`](https://attack.mitre.org/techniques/T1190/)
+- Tactic: `Initial Access` [`TA0001`](https://attack.mitre.org/tactics/TA0001/)
+  + Technique: `Exploit Public-Facing Application` [`T1190`](https://attack.mitre.org/techniques/T1190/)
 
     Attacker use tools to exploit XSS vulnerabilities.
  
-- Tactic: Persistence [`TA0003`](https://attack.mitre.org/tactics/TA0003/)
-  + Technique: Valid Accounts: Local Accounts [`T1078.003`](https://attack.mitre.org/techniques/T1078/003/)
+- Tactic: `Persistence` [`TA0003`](https://attack.mitre.org/tactics/TA0003/)
+  + Technique: `Valid Accounts: Local Accounts` [`T1078.003`](https://attack.mitre.org/techniques/T1078/003/)
 
     Attacker retrieve and use legitimate local admin account credentials.
 
-- Tactic: Command and Control [`TA0011`](https://attack.mitre.org/tactics/TA0011/)
-  + Technique: Application Layer Protocol: Web Protocols [`T1071.001`](https://attack.mitre.org/techniques/T1071/001/)
+- Tactic: `Command and Control` [`TA0011`](https://attack.mitre.org/tactics/TA0011/)
+  + Technique: `Application Layer Protocol: Web Protocols` [`T1071.001`](https://attack.mitre.org/techniques/T1071/001/)
 
     Attacker use HTTPS for Command and Control which carries web traffic may be very common in environments. HTTPS packets have many fields and headers in which data can be concealed.
 
-### MITRE DEF3ND
+### MITRE D3FEND
+
+- Tactic: `Harden` [`d3f:Harden`](https://d3fend.mitre.org/tactic/d3f:Harden/)
+  + Technique: `Agent Authentication: Multi-factor Authentication` [`D3-MFA`](https://d3fend.mitre.org/technique/d3f:Multi-factorAuthentication)
+
+- Tactic: `Detect` [`d3f:Detect`](https://d3fend.mitre.org/tactic/d3f:Detect)
+  + Technique: `Process Analysis: Database Query String Analysis` [`D3-DQSA`](https://d3fend.mitre.org/technique/d3f:DatabaseQueryStringAnalysis/)
+  + Technique: `Network Traffic Analysis: Protocol Metadata Anomaly Detection` [`D3-PMAD`](https://d3fend.mitre.org/technique/d3f:ProtocolMetadataAnomalyDetection/)
+  + Technique: `Platform Monitoring: File Integrity Monitoring` [`D3-FIM`](https://d3fend.mitre.org/technique/d3f:FileIntegrityMonitoring/)
+  + Technique: `File Analysis: File Content Rules` [`D3-FCR`](https://d3fend.mitre.org/technique/d3f:FileContentRules/)
 
 
 ## Questions
