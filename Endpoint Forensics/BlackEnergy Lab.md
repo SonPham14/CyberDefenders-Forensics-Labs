@@ -69,7 +69,7 @@ To identify the recent process and investigate its behavior, we can use `handles
 
 ![{CA054AD1-56F6-40F9-B941-942BDFB7446F}](https://github.com/user-attachments/assets/61177dd8-2e13-4e9e-9298-bcef8a9a9bb4)
 
-
+`svchost.exe` is a process that operates in **user-mode**, while the file `str.sys` is located in the `\Windows\System32\drivers` directory — a folder that contains hardware and system service drivers which run in **kernel-mode**. This means they have the highest level of access in the OS and can deeply interact with the system.
 
 **Answer: C:\WINDOWS\system32\drivers\str.sys**
 
