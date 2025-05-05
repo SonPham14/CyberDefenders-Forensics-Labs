@@ -52,7 +52,7 @@ In Volatility 2, `malfind` plugin is used to detect and extract suspicious code 
 ![{1E6ACE74-C4F8-4AB3-84C7-01A54F7FECA0}](https://github.com/user-attachments/assets/68e45ef8-3f70-419d-8639-dc84a9ad147b)
 
 
-Windows allocated a memory region with PAGE_EXECUTE_READWRITE for the svchost.exe process, and the “MZ” header (hex 4D 5A) shows that a PE file (such as EXE, DLL,...) has been directly embedded into this memory region. Learn about file signatures [here](https://filesig.search.org/).
+Windows allocated a memory region with PAGE_EXECUTE_READWRITE for the svchost.exe process, and the "MZ" header (4D 5A in Hex) shows that a PE file (such as EXE, DLL,...) has been directly embedded into this memory region. Learn about file signatures [here](https://filesig.search.org/).
 
 ![{BFD645AF-C7C7-44A6-BD4B-8B8800F12648}](https://github.com/user-attachments/assets/3370c3f3-7d11-4b15-bc8c-76bdf14568b3)
 
