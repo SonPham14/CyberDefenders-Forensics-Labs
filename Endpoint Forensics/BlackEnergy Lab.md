@@ -9,6 +9,14 @@ A multinational corporation has suffered a cyber attack, resulting in the theft 
 
 ## MITRE ATT&CK & D3FEND
 
+### MITRE ATT&CK
+
+
+
+### MITRE D3FEND
+
+
+
 
 ## Question
 
@@ -87,8 +95,13 @@ DLL injection is a common technique used by attackers to execute malicious code 
 
 **Answer: msxml3r.dll**
 
-Q8. What is the base address of the injected DLL?
+### Q8. What is the base address of the injected DLL?
 
 See at Question 5.
 
 **Answer: 0x980000**
+
+## References
+
+- [1] Pavel Yosifovich, Alex Ionescu, Mark Russinovich and David Solomon, *Windows Internals: System architecture, processes, threads, memory management, and more* (7th ed). Microsoft Press, May 5, 2017.
+- [2] File Signature: https://filesig.search.org/
