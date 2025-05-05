@@ -69,15 +69,26 @@ To identify the recent process and investigate its behavior, we can use `handles
 
 ![{CA054AD1-56F6-40F9-B941-942BDFB7446F}](https://github.com/user-attachments/assets/61177dd8-2e13-4e9e-9298-bcef8a9a9bb4)
 
-`svchost.exe` is a process that operates in **user-mode**, while the file `str.sys` is located in the `\Windows\System32\drivers` directory — a folder that contains hardware and system service drivers which run in **kernel-mode**. This means they have the highest level of access in the OS and can deeply interact with the system.
+`svchost.exe` is a process that operates in **user-mode**, while the file `str.sys` is located in the `\Windows\System32\drivers` directory — a folder that contains hardware and system service drivers which run in **kernel-mode**. This means they have the highest level of access in the OS and can deeply interact with the system. In addition, the driver name “str.sys” is unusual and meaningless. The legitimate process `svchost.exe` was injected with code to exploit it for executing or accessing the `str.sys` file in order to gain kernel-mode privileges.
 
 **Answer: C:\WINDOWS\system32\drivers\str.sys**
 
 ### Q7. What is the name of the injected DLL file loaded from the recent process?
 
+We can use `dlllist` plugin to extract the process’s loaded modules. But one thing, during an investigation, it is a good practice to compare both **dlllist** and **ldrmodules** results to see if there is any unlinking between the process loaded modules. Because some sample have the ability to unlink themselves from other modules, and if the sample has this capability when you run dlllist plugin, that module won’t appear on the result.
+
+![{20A0ED72-1B4B-4B52-A41D-BE398455E63A}](https://github.com/user-attachments/assets/5a1b9e9c-16a3-488f-8766-13b0229bdeac)
+
+![{29B0448C-7264-45C0-8A15-5EFA1ADCD811}](https://github.com/user-attachments/assets/84d34855-128f-4ad8-bf8b-d474e462aae1)
+
+The DLL file `msxml3r.dll` is loaded by svchost.exe but is marked False in all three columns InLoad, InInit, and InMem. Note also that the name msxml3r.dll is unusual and differs from the original Windows file named msxml3.dll. This is highly suspicious because a legitimate DLL loaded by the Windows loader through the normal mechanism will have all three of these values set to True. This DLL is not fully recognized in these lists indicates it has been injected into the process.
+
+DLL injection is a common technique used by attackers to execute malicious code within the context of a legitimate process. By doing so, they can hide their activities and exploit the privileges of the targeted process.
 
 **Answer: msxml3r.dll**
 
 Q8. What is the base address of the injected DLL?
+
+See at Question 5.
 
 **Answer: 0x980000**
