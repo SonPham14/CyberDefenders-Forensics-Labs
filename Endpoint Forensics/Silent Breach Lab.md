@@ -98,7 +98,7 @@ $deriveBytes = New-Object System.Security.Cryptography.Rfc2898DeriveBytes($passw
 $key = $deriveBytes.GetBytes($keySize)
 $iv = $deriveBytes.GetBytes($ivSize)
 ```
-*Note: key and iv should change byte to hex before decrypting*
+*Note: key and iv need to be changed from decimal to hex before decrypting*
 
 ![{711B5161-75A2-48DB-B787-BAF7BD1C6D8C}](https://github.com/user-attachments/assets/d82654cc-cfaf-419a-b18e-feb1604c7c9e)
 
