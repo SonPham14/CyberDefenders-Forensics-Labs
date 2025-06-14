@@ -8,12 +8,12 @@
   - `Microsoft\Windows\CurrentVersion\Run`
   - `Microsoft\Windows\CurrentVersion\RunOnce`
 
-### SYSTEM
-- Computer Name: `<CurrentControlSet>\Control\ComputerName\ComputerName`
-
 - Installed Programs:
   - `Microsoft\Windows\CurrentVersion\Uninstall`
   - `WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall`
+
+### SYSTEM
+- Computer Name: `<CurrentControlSet>\Control\ComputerName\ComputerName`
 
 - Timezone: `<CurrentControlSet>\Control\TimeZoneInformation`
 
