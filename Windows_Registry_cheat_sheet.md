@@ -30,6 +30,7 @@
 - Timezone: `<CurrentControlSet>\Control\TimeZoneInformation`
 
 - Network interfaces: `<CurrentControlSet>\Services\Tcpip\Parameters\Interfaces`
+  - Local IP address: `<CurrentControlSet>\Services\Tcpip\Parameters\Interfaces{GUID}\DhcpIPAddress`
 
 - Services: `SYSTEM\CurrentControlSet\Services`
 
